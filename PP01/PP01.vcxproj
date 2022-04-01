@@ -139,7 +139,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="PP01.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Week3-1.cpp" />
+    <ClCompile Include="Week3-2.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="KeyCommand.hpp" />
+    <ClInclude Include="MCommand.hpp" />
+    <ClInclude Include="MGameLoop.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

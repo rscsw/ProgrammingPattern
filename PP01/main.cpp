@@ -1,4 +1,4 @@
-﻿#include <iostream>
+﻿/*#include <iostream>
 #include <string>
 
 using namespace std;
@@ -100,4 +100,4 @@ int main()
 	delete(e);
 
     return 0;
-}
+}*/
