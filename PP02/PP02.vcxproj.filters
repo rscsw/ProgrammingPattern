@@ -15,8 +15,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Week1.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="..\PP01\Week2.cpp">
+      <Filter>리소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -2,7 +2,7 @@
 
 int main()
 {
-	Musoeun_Engine::MGameLoop gLoop;
+	MuSeoun_Engine::MGameLoop gLoop;
 	gLoop.Run();
 
 	return 0;

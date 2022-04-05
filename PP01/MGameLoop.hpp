@@ -1,68 +1,92 @@
 #pragma once
+#include <iostream>
+#include <chrono>
+#include <thread>
+#include <Windows.h>
 
 using namespace std;
 
-namespace Musoeun
+namespace Musoeun_Engine
 {
-	MCommand* key[5];
-
-	void Initialize()
-	{
-		//cout << "초기화 중...\n";
-		key[0] = new LeftCommand();
-		key[1] = new RightCommand();
-		key[2] = new DownCommand();
-		key[3] = new JumpCommand();
-		key[4] = new RunCommand();
-	}
-
-	void Input()
-	{
-		//cout << "입력 중...\n";
-		int input;
-		cin >> input;
-
-		key[input]->Execute();
-	}
-
-	void Update()
-	{
-		//cout << "Update 중...\n";
-	}
-
-	void Render()
-	{
-		//cout << "Rendering 중...\n";
-	}
-
-	void Release()
-	{
-		//cout << "삭제 중...\n";
-		for (size_t i = 0; i < 5; i++)
-		{
-			delete(key[i]);
-		}
-	}
-
 	class MGameLoop
 	{
-	public:
-		bool isGameRunning = false;
+	private:
+		bool _isGameRunning;
 
-		MGameLoop() {}
+	public:
+		MGameLoop()
+		{
+			_isGameRunning = false;
+		}
 		~MGameLoop() {}
 
 		void Run()
 		{
-			isGameRunning = true;
+			_isGameRunning = true;
 			Initialize();
-			while (isGameRunning)
+			while (_isGameRunning)
 			{
 				Input();
 				Update();
 				Render();
 			}
 			Release();
+		}
+		void Stop()
+		{
+			_isGameRunning = false;
+		}
+
+	private:
+		void Initialize()
+		{
+			SetCursorState(false);
+		}
+
+		void Input()
+		{
+			if (GetAsyncKeyState(VK_SPACE) == 0x8000 || GetAsyncKeyState(VK_SPACE) == 0x8001)
+			{
+
+			}
+			else
+			{
+
+			}
+		}
+		void Update()
+		{
+
+		}
+		void Render()
+		{
+			chrono::system_clock::time_point startRender = chrono::system_clock::now();
+
+			//system("cls");
+			cout << "Rendering...";
+
+			chrono::duration<double> renderDuration = chrono::system_clock::now() - startRender;
+			cout << "Rendering Duration : " << renderDuration.count() << "sec" << endl;
+
+			int remainingFrameTime = 100 - (renderDuration.count() * 1000.0);
+			if (remainingFrameTime > 0)
+				this_thread::sleep_for(chrono::milliseconds(remainingFrameTime));
+		}
+		void Release() {}
+
+	private: //게임 사용 함수
+		void MoveCursor(short x, short y)
+		{
+			COORD position = { x, y };
+			SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), position);
+		}
+
+		void SetCursorState(bool visible)
+		{
+			CONSOLE_CURSOR_INFO consoleCursorInfo;
+			consoleCursorInfo.bVisible = visible;
+			consoleCursorInfo.dwSize = 1;
+			SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &consoleCursorInfo);
 		}
 	};
 }
