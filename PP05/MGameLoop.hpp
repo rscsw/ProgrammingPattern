@@ -49,7 +49,6 @@ namespace MuSeoun_Engine
 
 		void Input()
 		{
-			startRenderTimePoint = chrono::system_clock::now();
 			/*	if (GetAsyncKeyState(VK_SPACE) & 0x8000 || GetAsyncKeyState(VK_SPACE) & 0x8001)
 				{
 
@@ -70,22 +69,14 @@ namespace MuSeoun_Engine
 			cRenderer.MoveCursor(10, 20);
 
 			chrono::duration<double> renderDuration = chrono::system_clock::now() - startRenderTimePoint;
+			startRenderTimePoint = chrono::system_clock::now();
 
-			pp += renderDuration.count();
-			if (pp > 1.0)
-			{
-				c = 0;
-				pp = 0;
-			}
-			c++;
-
-			string s = "FPS : " + to_string(c);
-			cRenderer.DrawString(s);
+			double fps = 1.0 / renderDuration.count();
+			cRenderer.DrawString("FPS : " + to_string(fps));
 
 			//chrono::duration<double> renderDuration = chrono::system_clock::now() - startRenderTimePoint;
 			//string fps = "FPS(milliseconds) : " + to_string(renderDuration.count());
 			//cRenderer.DrawString(fps);
-
 
 		}
 		////cout << "Rendering speed : " << renderDuration.count() << "sec" << endl;
