@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PP07", "PP07\PP07.vcxproj",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PP08", "PP08\PP08.vcxproj", "{BCB42F13-998B-4656-B107-870D04153DA8}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PP09", "PP09\PP09.vcxproj", "{E01FDAE3-0BEB-4815-80ED-BF7CCDB615DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,18 @@ Global
 		{BCB42F13-998B-4656-B107-870D04153DA8}.Release|x64.Build.0 = Release|x64
 		{BCB42F13-998B-4656-B107-870D04153DA8}.Release|x86.ActiveCfg = Release|Win32
 		{BCB42F13-998B-4656-B107-870D04153DA8}.Release|x86.Build.0 = Release|Win32
+		{E01FDAE3-0BEB-4815-80ED-BF7CCDB615DB}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{E01FDAE3-0BEB-4815-80ED-BF7CCDB615DB}.Debug|Any CPU.Build.0 = Debug|x64
+		{E01FDAE3-0BEB-4815-80ED-BF7CCDB615DB}.Debug|x64.ActiveCfg = Debug|x64
+		{E01FDAE3-0BEB-4815-80ED-BF7CCDB615DB}.Debug|x64.Build.0 = Debug|x64
+		{E01FDAE3-0BEB-4815-80ED-BF7CCDB615DB}.Debug|x86.ActiveCfg = Debug|Win32
+		{E01FDAE3-0BEB-4815-80ED-BF7CCDB615DB}.Debug|x86.Build.0 = Debug|Win32
+		{E01FDAE3-0BEB-4815-80ED-BF7CCDB615DB}.Release|Any CPU.ActiveCfg = Release|x64
+		{E01FDAE3-0BEB-4815-80ED-BF7CCDB615DB}.Release|Any CPU.Build.0 = Release|x64
+		{E01FDAE3-0BEB-4815-80ED-BF7CCDB615DB}.Release|x64.ActiveCfg = Release|x64
+		{E01FDAE3-0BEB-4815-80ED-BF7CCDB615DB}.Release|x64.Build.0 = Release|x64
+		{E01FDAE3-0BEB-4815-80ED-BF7CCDB615DB}.Release|x86.ActiveCfg = Release|Win32
+		{E01FDAE3-0BEB-4815-80ED-BF7CCDB615DB}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
