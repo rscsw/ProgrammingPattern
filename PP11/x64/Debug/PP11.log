@@ -1,0 +1,8 @@
+﻿  OpenGL.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\minwindef.h(130,1): warning C4005: 'APIENTRY': 매크로 재정의
+D:\VR20221\ProgramingPattern\PP01\packages\glfw.3.3.7\build\native\include\GLFW\glfw3.h(123): message : 'APIENTRY'의 이전 정의를 참조하십시오.
+D:\VR20221\ProgramingPattern\PP01\PP11\OpenGL.cpp(18,17): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\VR20221\ProgramingPattern\PP01\PP11\OpenGL.cpp(19,17): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\VR20221\ProgramingPattern\PP01\PP11\OpenGL.cpp(24,36): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\VR20221\ProgramingPattern\PP01\PP11\OpenGL.cpp(24,25): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  PP11.vcxproj -> D:\VR20221\ProgramingPattern\PP01\x64\Debug\PP11.exe

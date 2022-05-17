@@ -54,7 +54,7 @@ void main()
 			glPointSize(10);
 			glBegin(GL_POINTS);
 			glColor3f(1.0f, 0.0f, 0.0f);
-			glVertex2f(-0.5f, 0.5f);
+			glVertex2f(-0.5f, 0.2f);
 			glEnd();
 		}
 		else
@@ -67,8 +67,8 @@ void main()
 		}
 
 		MonsterisComing(x);
-		x -= 0.001f;
-		if (x >= 1.0f) x = -1.0f;
+		x -= 0.0005f;
+		if (x == 1.0f) x = -1.0f;
 
 		glfwSwapBuffers(window);
 		glfwPollEvents();
