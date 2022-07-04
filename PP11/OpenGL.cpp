@@ -76,7 +76,7 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
 int main(void)
 {
     GLFWwindow* window;
-    glfwSetErrorCallback(error_callback);
+    glfwSetErrorCallback(error_callback); //함수에 괄호를 안 붙이면 함수의 주소값을 불러올 수 있다
     if (!glfwInit())
         exit(EXIT_FAILURE);
     window = glfwCreateWindow(1000, 700, "Simple example", NULL, NULL);
@@ -119,6 +119,8 @@ int main(void)
 
         glfwSwapBuffers(window);
         glfwPollEvents();
+
+        _CrtDumpMemoryLeaks();
     }
     glfwDestroyWindow(window);
     glfwTerminate();

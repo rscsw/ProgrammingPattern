@@ -1,4 +1,4 @@
-/*#include <iostream>
+#include <iostream>
 #include <string>
 
 using namespace std;
@@ -84,4 +84,4 @@ void main()
 		c[i]->ChangeGear();
 		delete(c[i]);
 	}
-}*/
+}
